@@ -23,9 +23,13 @@ def tCalisanisInt():
         sayi = 25
     try:
         sayi = float(sayi)
+        #sıfırdan ufak çalışan sayısı girilemez
+        if(sayi <= 0):
+            print("Çalışan sayısı 0'dan küçük olamaz!!!")
+            sys.exit()
         #eğer sayısal değer girilmez ise programdan çıkar
     except ValueError:
-        print("Lütfen bir sayı giriniz, KELİME değil")
+        print("Lütfen bir sayı giriniz, KELİME değil!!!")
         sys.exit()
     else:
         if((sayi % 1) == 0):
@@ -40,7 +44,7 @@ def sayisalDegerAl(deger):
     try:
         sayi = float(input(f"{deger} giriniz: "))
     except ValueError:
-        print("Lütfen bir sayı giriniz, KELİME değil")
+        print("Lütfen bir sayı giriniz, KELİME değil!!!")
     else:
         return sayi
 	
